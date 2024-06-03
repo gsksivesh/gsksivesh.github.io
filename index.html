@@ -1,0 +1,522 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --------------------------- CSS -------------------------- */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fffff0;
+        }
+
+        .container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar {
+            padding: 10px;
+            position: relative;
+            background-color: #ffffff;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .calendar .days {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(6, 50px);
+            grid-column-gap: 50px;
+            grid-row-gap: 18px;
+        }
+
+        .calendar .days .day-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 35px;
+            border-radius: 100%;
+            background-color: #dbf7ff;
+            transition: all 0.4s ease-in-out;
+            width: 65px;
+            height: 65px;
+        }
+
+        .calendar .days .day-number:hover, .complete-date {
+            border: 2px solid #9aceff;
+            transform: scale(1.2);
+            background-color: transparent !important;
+        }
+
+        .month {
+            font-size: 8px;
+        }
+
+        .day-number p {
+            text-align: center;
+        }
+
+        .count {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="calendar">
+
+
+        <div class="days">
+            <div class="day-number complete-date">
+                <div>
+                    <p class="month">May 2024</p>
+                    <p class="count">1</p>
+                </div>
+            </div>
+            <div class="day-number complete-date">
+                <div>
+                    <p class="month">Jun 2024</p>
+                    <p class="count">2</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jul 2024</p>
+                    <p class="count">3</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Aug 2024</p>
+                    <p class="count">4</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Sep 2024</p>
+                    <p class="count">5</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Oct 2024</p>
+                    <p class="count">6</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Nov 2024</p>
+                    <p class="count">7</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Dec 2024</p>
+                    <p class="count">8</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jan 2025</p>
+                    <p class="count">9</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Feb 2025</p>
+                    <p class="count">10</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Mar 2025</p>
+                    <p class="count">11</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Apr 2025</p>
+                    <p class="count">12</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">May 2025</p>
+                    <p class="count">13</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jun 2025</p>
+                    <p class="count">14</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jul 2025</p>
+                    <p class="count">15</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Aug 2025</p>
+                    <p class="count">16</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Sep 2025</p>
+                    <p class="count">17</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Oct 2025</p>
+                    <p class="count">18</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Nov 2025</p>
+                    <p class="count">19</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Dec 2025</p>
+                    <p class="count">20</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jan 2026</p>
+                    <p class="count">21</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Feb 2026</p>
+                    <p class="count">22</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Mar 2026</p>
+                    <p class="count">23</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Apr 2026</p>
+                    <p class="count">24</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">May 2026</p>
+                    <p class="count">25</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jun 2026</p>
+                    <p class="count">26</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jul 2026</p>
+                    <p class="count">27</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Aug 2026</p>
+                    <p class="count">28</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Sep 2026</p>
+                    <p class="count">29</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Oct 2026</p>
+                    <p class="count">30</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Nov 2026</p>
+                    <p class="count">31</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Dec 2026</p>
+                    <p class="count">32</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jan 2027</p>
+                    <p class="count">33</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Feb 2027</p>
+                    <p class="count">34</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Mar 2027</p>
+                    <p class="count">35</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Apr 2027</p>
+                    <p class="count">36</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">May 2027</p>
+                    <p class="count">37</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jun 2027</p>
+                    <p class="count">38</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jul 2027</p>
+                    <p class="count">39</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Aug 2027</p>
+                    <p class="count">40</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Sep 2027</p>
+                    <p class="count">41</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Oct 2027</p>
+                    <p class="count">42</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Nov 2027</p>
+                    <p class="count">43</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Dec 2027</p>
+                    <p class="count">44</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jan 2028</p>
+                    <p class="count">45</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Feb 2028</p>
+                    <p class="count">46</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Mar 2028</p>
+                    <p class="count">47</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Apr 2028</p>
+                    <p class="count">48</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">May 2028</p>
+                    <p class="count">49</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jun 2028</p>
+                    <p class="count">50</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jul 2028</p>
+                    <p class="count">51</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Aug 2028</p>
+                    <p class="count">52</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Sep 2028</p>
+                    <p class="count">53</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Oct 2028</p>
+                    <p class="count">54</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Nov 2028</p>
+                    <p class="count">55</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Dec 2028</p>
+                    <p class="count">56</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jan 2029</p>
+                    <p class="count">57</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Feb 2029</p>
+                    <p class="count">58</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Mar 2029</p>
+                    <p class="count">59</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Apr 2029</p>
+                    <p class="count">60</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">May 2029</p>
+                    <p class="count">61</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jun 2029</p>
+                    <p class="count">62</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jul 2029</p>
+                    <p class="count">63</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Aug 2029</p>
+                    <p class="count">64</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Sep 2029</p>
+                    <p class="count">65</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Oct 2029</p>
+                    <p class="count">66</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Nov 2029</p>
+                    <p class="count">67</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Dec 2029</p>
+                    <p class="count">68</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Jan 2030</p>
+                    <p class="count">69</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Feb 2030</p>
+                    <p class="count">70</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Mar 2030</p>
+                    <p class="count">71</p>
+                </div>
+            </div>
+            <div class="day-number">
+                <div>
+                    <p class="month">Apr 2030</p>
+                    <p class="count">72</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
